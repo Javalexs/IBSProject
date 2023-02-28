@@ -38,8 +38,6 @@ public class RegPage {
     }
     public RegPage checkBox(){
         $(".checkbox label span").scrollIntoView(true).click();
-
-//        $(".form-footer").$(".checkbox label span").click();
         return this;
     }
 
