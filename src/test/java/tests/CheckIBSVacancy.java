@@ -11,23 +11,26 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static io.qameta.allure.Allure.step;
+
 public class CheckIBSVacancy extends TestBase {
     @Test
-    @DisplayName("Проверка баннера на странице вакансии")
+    @DisplayName("Проверка наличия заголовка вакансии")
     void checkBannerTest(){
-       generalPage.bannerTest();
+        generalPage.bannerTest();
     }
     @Test
     @DisplayName("Проверка содержания заголовка вакансии")
     void checkHeadingTest(){
         String expectedTitle = "Инженер по автоматизации тестирования Java";
         generalPage.headingTest(expectedTitle);
+
     }
     @Test
-    @DisplayName("Поиск названия вакансии")
+    @DisplayName("Проверка  вакансии на странице")
     void checkSearchVacancyTest(){
         String value = "Аналитик СЭД";
-       generalPage.searchVacancyTest(value);
+        generalPage.searchVacancyTest(value);
     }
 
     @ValueSource(strings = {
@@ -45,9 +48,11 @@ public class CheckIBSVacancy extends TestBase {
             "Направления, IBS и МЭСИ заключили соглашение о стратегическом партнерстве",
             "Проекты, Управление проектами – для специалистов заказчика"
     })
-    @ParameterizedTest(name = "Проверка наличия на сайте статьи {1} " + ", в результате ввода запроса {0}")
+    @ParameterizedTest(name = "Проверка названия статьи {1} " + ", в результате ввода запроса в поиск {0}")
     void checkSearchTest(String searchWord, String categoryWord) {
-        locatorPage.searchTest(searchWord, categoryWord);
+        step("Присутствие заголовка статьи в результате ввода запроса", () ->{
+            locatorPage.searchTest(searchWord, categoryWord);
+        });
     }
 
     static Stream<Arguments> searchCategoryTest() {
@@ -66,12 +71,12 @@ public class CheckIBSVacancy extends TestBase {
         );
     }
     @MethodSource
-    @ParameterizedTest(name = "Отображение списка подкатегорий {1} " + ", в категории {0}")
+    @ParameterizedTest(name = "Проверка отображения списка подкатегорий {1} " + ", в категории {0}")
     void searchCategoryTest(String category, List<String> filter){
-        locatorPage.categoryTest(category, filter);
+            locatorPage.categoryTest(category, filter);
     }
     @Test
-    @DisplayName("Заполнение личных данных на странице вакансии")
+    @DisplayName("Проверка страницы отклика на вакансию")
     void checkRegistrationPageTest() {
         String link = "https://hh.ru/resume/bedbb11cff092cc6850039ed1f6e5067464672";
         String name = "Alexey";
@@ -88,6 +93,7 @@ public class CheckIBSVacancy extends TestBase {
                .setPhone(phone)
                .setMessage(str)
                .checkBox();
+
     }
 }
 
