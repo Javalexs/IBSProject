@@ -7,12 +7,13 @@ import java.util.List;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class LocatorPage {
+    private static final String url = "/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/";
     public LocatorPage categoryTest(String value, List<String> arr){
+        open(url);
         step("Открываем меню в правом верхнем углу", () -> {
             $(".header-burger").click();
         });
@@ -25,6 +26,7 @@ public class LocatorPage {
         return this;
     }
     public LocatorPage searchTest(String value, String word){
+        open(url);
         step("Открываем поиск", () -> {
             $(".header-search a").click();
         });
@@ -38,6 +40,7 @@ public class LocatorPage {
     }
 
     public LocatorPage subTitleTest(String value){
+        open(url);
         step("Поиск подзаголовков в тексте вакансии", () -> {
             $$(".col-9 col-t-12").find(text(value));
         });
