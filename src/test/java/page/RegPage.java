@@ -1,11 +1,6 @@
 package page;
 
-import com.codeborne.selenide.CollectionCondition;
-
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
