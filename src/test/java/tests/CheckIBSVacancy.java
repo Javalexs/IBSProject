@@ -117,14 +117,14 @@ public class CheckIBSVacancy extends TestBase {
 
     })
     @ParameterizedTest(name = "Поиск элемента {0} в навигации страницы")
-    void checkPathNegativeTest(String value) {
-//        open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
-        $(".breadcrumbs").shouldHave(text(value));
+    void checkPathNegativeTest(String str) {
+        negativePage.pathNegativeTest(str);
     }
     @Test
-    void checkFaviconNegativeTest(){
-//        open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
-        $(".wrap a").shouldBe(hidden);
+    @DisplayName("Проверка отсутсвия фавикона")
+    void checkFaviconNegativeTest(String value){
+        negativePage.faviconNegativeTest(value);
+
     }
 }
 

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import page.GeneralPage;
 import page.LocatorPage;
+import page.NegativePage;
 import page.RegPage;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -18,6 +19,7 @@ public class TestBase {
     public GeneralPage generalPage = new GeneralPage();
     public RegPage regPage = new RegPage();
     public LocatorPage locatorPage = new LocatorPage();
+    public NegativePage negativePage = new NegativePage();
     @BeforeAll
     static void addSite(){
         Configuration.browser = System.getProperty("browser", "chrome");
