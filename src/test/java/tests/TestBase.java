@@ -19,7 +19,7 @@ public class TestBase {
     public RegPage regPage = new RegPage();
     public LocatorPage locatorPage = new LocatorPage();
     @BeforeAll
-    void addSite(){
+    static void addSite(){
         open("https://ibs.ru/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
