@@ -20,12 +20,11 @@ public class TestBase {
     public LocatorPage locatorPage = new LocatorPage();
     @BeforeAll
     static void addSite(){
-        Configuration.baseUrl = "https://ibs.ru";
-//        open("https://ibs.ru/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://ibs.ru");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
