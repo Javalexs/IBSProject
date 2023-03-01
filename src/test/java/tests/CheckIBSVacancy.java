@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,15 +13,20 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static com.codeborne.selenide.Condition.hidden;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@Tag("start")
 public class CheckIBSVacancy extends TestBase {
     @BeforeEach
     void openUrl(){
         open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
     }
     @Test
+    @Tag("stop")
     @DisplayName("Проверка наличия заголовка вакансии")
     void checkBannerTest(){
         generalPage.bannerTest();
@@ -102,7 +108,24 @@ public class CheckIBSVacancy extends TestBase {
 
     }
 
-//    breadcrumbs
+
+    @ValueSource(strings = {
+        "Главная",
+        "Карьера",
+        "Вакансии",
+        "Тестирование"
+
+    })
+    @ParameterizedTest(name = "Поиск элемента {0} в навигации страницы")
+    void checkPathNegativeTest(String value) {
+//        open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
+        $(".breadcrumbs").shouldHave(text(value));
+    }
+    @Test
+    void checkFaviconNegativeTest(){
+//        open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
+        $(".wrap a").shouldBe(hidden);
+    }
 }
 
 
