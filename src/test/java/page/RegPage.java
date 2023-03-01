@@ -1,14 +1,12 @@
 package page;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
 public class RegPage {
     private static final String url = "/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/";
     public RegPage firstAct(){
-        open(url);
         step("Жмем кнопку \"Принять условия\"", () -> {
             $(linkText("Принять условия")).click();
         });
@@ -21,14 +19,12 @@ public class RegPage {
         return this;
     }
     public RegPage setLinkCv(String value){
-
         step("Вставляем ссылку на вакансия с сайта hh.ru", () -> {
             $("#link").setValue(value);
         });
         return this;
     }
     public RegPage setFirstName(String value){
-
         step("Вводим имя", () -> {
             $("#name").setValue(value);
         });
