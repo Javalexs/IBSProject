@@ -8,18 +8,16 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import page.FailPage;
 import page.GeneralPage;
 import page.LocatorPage;
-import page.NegativePage;
 import page.RegPage;
-
-import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
     public GeneralPage generalPage = new GeneralPage();
     public RegPage regPage = new RegPage();
     public LocatorPage locatorPage = new LocatorPage();
-    public NegativePage negativePage = new NegativePage();
+    public FailPage failPage = new FailPage();
     @BeforeAll
     static void addSite(){
         Configuration.browser = System.getProperty("browser", "chrome");

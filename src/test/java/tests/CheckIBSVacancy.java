@@ -13,9 +13,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Condition.hidden;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
@@ -66,7 +63,6 @@ public class CheckIBSVacancy extends TestBase {
             locatorPage.searchTest(searchWord, categoryWord);
         });
     }
-
     static Stream<Arguments> searchCategoryTest() {
         List <String> company = List.of("О компании", "Менеджмент",
                 "История IBS", "Признание", "Партнёры", "Раскрытие информации", "Контакты");
@@ -107,24 +103,20 @@ public class CheckIBSVacancy extends TestBase {
                .checkBox();
 
     }
-
-
     @ValueSource(strings = {
         "Главная",
         "Карьера",
         "Вакансии",
         "Тестирование"
-
     })
     @ParameterizedTest(name = "Поиск элемента {0} в навигации страницы")
-    void checkPathNegativeTest(String str) {
-        negativePage.pathNegativeTest(str);
+    void checkPathFailTest(String str) {
+        failPage.pathFailTest(str);
     }
     @Test
-    @DisplayName("Проверка отсутсвия фавикона")
-    void checkFaviconNegativeTest(String value){
-        negativePage.faviconNegativeTest(value);
-
+    @DisplayName("Проверка отсутствия фавикона")
+    void checkFaviconFailTest(){
+        failPage.faviconFailTest();
     }
 }
 
