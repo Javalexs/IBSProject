@@ -44,7 +44,7 @@ public class CheckIBSVacancy extends TestBase {
             "Наши ожидания",
             "Мы предлагаем"
     })
-    @ParameterizedTest(name = "Поиск подзаголовка {0} в тексте вакансии")
+    @ParameterizedTest(name = "Поиск подзаголовка \"{0}\" в тексте вакансии")
     void searchSubTitleTest(String value) {
         locatorPage.subTitleTest(value);
     }
@@ -54,7 +54,7 @@ public class CheckIBSVacancy extends TestBase {
             "Направления, IBS и МЭСИ заключили соглашение о стратегическом партнерстве",
             "Проекты, Управление проектами – для специалистов заказчика"
     })
-    @ParameterizedTest(name = "Проверка названия статьи {1} " + ", в результате ввода запроса в поиск {0}")
+    @ParameterizedTest(name = "Проверка названия статьи \"{1}\"" + ", в результате ввода запроса в поиск \"{0}\"")
     void checkSearchTest(String searchWord, String categoryWord) {
         step("Присутствие заголовка статьи в результате ввода запроса", () ->{
             locatorPage.searchTest(searchWord, categoryWord);
@@ -76,7 +76,7 @@ public class CheckIBSVacancy extends TestBase {
         );
     }
     @MethodSource
-    @ParameterizedTest(name = "Проверка отображения списка подкатегорий {1} " + ", в категории {0}")
+    @ParameterizedTest(name = "Проверка отображения списка подкатегорий \"{1}\"" + ", в категории \"{0}\"")
     void searchCategoryTest(String category, List<String> filter){
             locatorPage.categoryTest(category, filter);
     }
@@ -106,7 +106,7 @@ public class CheckIBSVacancy extends TestBase {
         "Вакансии",
         "Тестирование"
     })
-    @ParameterizedTest(name = "Поиск элемента {0} в навигации страницы")
+    @ParameterizedTest(name = "Поиск элемента \"{0}\" в навигации страницы")
     void checkPathFailTest(String str) {
         failPage.pathFailTest(str);
     }
