@@ -1,9 +1,6 @@
 package tests;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -16,21 +13,19 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-//
+@Tag("start")
 public class CheckIBSVacancy extends TestBase {
     @BeforeEach
     void openUrl(){
         open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
     }
     @Test
-    @Tag("start")
-    @Tag("stop")
+    @Disabled
     @DisplayName("Проверка наличия заголовка вакансии")
     void checkBannerTest(){
         generalPage.bannerTest();
     }
     @Test
-    @Tag("start")
     @DisplayName("Проверка содержания заголовка вакансии")
     void checkHeadingTest(){
         String expectedTitle = "Инженер по автоматизации тестирования Java";
@@ -38,7 +33,6 @@ public class CheckIBSVacancy extends TestBase {
 
     }
     @Test
-    @Tag("start")
     @DisplayName("Проверка  вакансии на странице")
     void checkSearchVacancyTest(){
         String value = "Аналитик СЭД";
@@ -51,7 +45,6 @@ public class CheckIBSVacancy extends TestBase {
             "Мы предлагаем"
     })
     @ParameterizedTest(name = "Поиск подзаголовка {0} в тексте вакансии")
-    @Tag("start")
     void searchSubTitleTest(String value) {
         locatorPage.subTitleTest(value);
     }
@@ -62,7 +55,6 @@ public class CheckIBSVacancy extends TestBase {
             "Проекты, Управление проектами – для специалистов заказчика"
     })
     @ParameterizedTest(name = "Проверка названия статьи {1} " + ", в результате ввода запроса в поиск {0}")
-    @Tag("start")
     void checkSearchTest(String searchWord, String categoryWord) {
         step("Присутствие заголовка статьи в результате ввода запроса", () ->{
             locatorPage.searchTest(searchWord, categoryWord);
@@ -85,12 +77,10 @@ public class CheckIBSVacancy extends TestBase {
     }
     @MethodSource
     @ParameterizedTest(name = "Проверка отображения списка подкатегорий {1} " + ", в категории {0}")
-    @Tag("start")
     void searchCategoryTest(String category, List<String> filter){
             locatorPage.categoryTest(category, filter);
     }
     @Test
-    @Tag("start")
     @DisplayName("Проверка страницы отклика на вакансию")
     void checkRegistrationPageTest() {
         String link = "https://hh.ru/resume/bedbb11cff092cc6850039ed1f6e5067464672";
@@ -117,12 +107,10 @@ public class CheckIBSVacancy extends TestBase {
         "Тестирование"
     })
     @ParameterizedTest(name = "Поиск элемента {0} в навигации страницы")
-    @Tag("start")
     void checkPathFailTest(String str) {
         failPage.pathFailTest(str);
     }
     @Test
-    @Tag("start")
     @DisplayName("Проверка отсутствия фавикона")
     void checkFaviconFailTest(){
         failPage.faviconFailTest();
