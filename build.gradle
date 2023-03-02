@@ -61,6 +61,11 @@ tasks.withType(Test) {
 task start_tests (type: Test) {
     useJUnitPlatform{
         includeTags("start")
-        excludeTags("stop")
+
     }
 }
+//task stop_tests (type: Test) {
+//    useJUnitPlatform {
+//        includeTags("stop")
+//    }
+//}
