@@ -115,6 +115,7 @@ public class CheckIBSVacancy extends TestBase {
     void checkFaviconFailTest(){
         failPage.faviconFailTest();
     }
+
 }
 
 
