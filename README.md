@@ -17,7 +17,7 @@
 
 <p  align="center">
 
-<code><img width="5%" title="IntelliJ IDEA" src="images/logo/Idea.svg"></code>
+<code><img width="5%" title="IntelliJ IDEA" src="images/icons/Idea.svg"></code>
 <code><img width="5%" title="Java" src="images/icons/Java.svg"></code>
 <code><img width="5%" title="Selenoid" src="images/icons/Selenoid.svg"></code>
 <code><img width="5%" title="Selenide" src="images/icons/Selenide.svg"></code>
