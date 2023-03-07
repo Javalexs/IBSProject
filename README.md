@@ -4,8 +4,7 @@
 
 - [Технологии и инструменты](#technologist-технологии-и-инструменты)
 - [Реализованыe проверки](#bookmark_tabs-реализованные-проверки)
-- [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
-- [Запуск тестов в Jenkins](#-запуск-тестов-в-jenkins)
+- [Запуск тестов](#computer-запуск-тестов)
 - [Отчет о результатах тестирования в Allure Report](#-отчет-о-результатах-тестирования-в-Allure-report)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
 - [Интеграция с Jira](#-интеграция-с-jira)
@@ -14,8 +13,6 @@
 
 
 ## :technologist: Технологии и инструменты
-
-
 
 <code><img width="5%" title="IntelliJ IDEA" src="images/icons/Idea.svg"></code>
 <code><img width="5%" title="Java" src="images/icons/Java.svg"></code>
@@ -46,7 +43,7 @@
 ```bash
 gradle clean test -Denv=local
 ```
- со следующими параметрами сборки по умолчанию:
+#### Параметры сборки по умолчанию:
 
  <code>baseUrl</code> =https://ibs.ru - адрес сайта на котором запускаются тесты
 
@@ -59,12 +56,29 @@ gradle clean test -Denv=local
  <code>isRemote=false</code> - проверка запуска теста локально
 
 
-### Удаленный запуск тестов производится через программу Jenkins через удаленный сервер 
+### Удаленный запуск тестов производится через программу [Jenkins] (https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
+### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
+и далее подтверить нажав на кнопку "Собрать"
 
- Параметры сборки по умолчанию:
+#### Параметры сборки по умолчанию:
+
  <code>baseUrl=https://ibs.ru</code> - адрес сайта на котором запускаются тесты
+
  <code>browserName=chrome</code> - имя браузера
+
  <code>browserVersion=100</code> - версия браузера
+
  <code>browserSize=1920x1080</code> - размер экрана
+
  <code>isRemote=true</code> - проверка запуска теста удаленно
+
  <code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного сервера (url изменен в целях безопасности)
+
+<p align="center">
+  <img src="images/screen/jenkins1.jpg" alt="Jenkins" width="800">
+</p>
+
+<p align="center">
+  <img src="images/screen/jenkins2.jpg" alt="Jenkins" width="800">
+</p>
+
