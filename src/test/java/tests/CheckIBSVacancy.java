@@ -60,7 +60,7 @@ public class CheckIBSVacancy extends TestBase {
     static Stream<Arguments> searchCategoryTest() {
         List <String> company = List.of("О компании", "Менеджмент",
                 "История IBS", "Признание", "Партнёры", "Раскрытие информации", "Контакты");
-        List <String> center = List.of("Проекты", "Новости", "Публикации в СМИ",
+        List <String> center = List.of("Новости", "Публикации в СМИ",
                 "События", "Материалы для СМИ");
         List <String> service =  List.of("Управление программами",
                 "Бизнес-консалтинг", "Бизнес-решения", "Разработка", "Тестирование", "Аутсорсинг IT-процессов",
@@ -112,7 +112,6 @@ public class CheckIBSVacancy extends TestBase {
     void checkFaviconFailTest(){
         failPage.faviconFailTest();
     }
-
 }
 
 

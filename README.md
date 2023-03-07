@@ -45,10 +45,11 @@
 ### Локальный запуск тестов
 
 ```bash
-gradle clean test -D///todo
+gradle clean test -Denv=local
 ```
 
 ### Удаленный запуск тестов
 
 ```bash
-gradle clean test -D/////todo
+gradle clean test -Denv=remote
+```
