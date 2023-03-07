@@ -90,14 +90,16 @@ gradle clean test -Denv=local
 
 ## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/QA-Project_UI/3/allure)
 
-Нажав на значки Allure Reзort и Allure TessOps можно посмотреть подробный отчет по тестам.
+Нажав на значки Allure Report и Allure TessOps можно посмотреть подробный отчет по тестам.
 
 На данной странице все тесты прошли успешно, что показывает зеленая круговая диаграмма "STATUS"
+
 <p align="center">
   <img src="images/screen/allure1.jpg" alt="allure1" width="900">
 </p>
 
 Тут два теста упали, а один тест был приостановлен 
+
 <p align="center">
   <img src="images/screen/allure2.jpg" alt="allure2" width="900">
 </p>
@@ -107,7 +109,7 @@ gradle clean test -Denv=local
   <img src="images/screen/AllureErr.jpg" alt="AllureErr" width="900">
 </p>
 
-
+##  Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/20096)<img width="4%" title="Allure TestOPS" src="images/icons/Allure_TO.svg">
 <p align="center">
   <img src="images/screen/AllureTestOps.jpg" alt="AllureErr" width="900">
 </p>
