@@ -100,13 +100,12 @@ public class CheckIBSVacancy extends TestBase {
     @ValueSource(strings = {
         "Главная",
         "Карьера",
-        "Вакансии",
-        "Тестирование"
+        "Вакансии"
     })
     @ParameterizedTest(name = "Поиск элемента \"{0}\" в навигации страницы")
     void checkPathFailTest(String str) {
         failPage.pathFailTest(str);
-    }
+    }//для того чтобы тест упал ввести слово "Тестирование"
     @Test
     @DisplayName("Проверка отсутствия фавикона")
     void checkFaviconFailTest(){
