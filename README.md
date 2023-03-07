@@ -64,5 +64,5 @@ browserName=chrome - имя браузера
 browserVersion=100 - версия браузера
 browserSize=1920x1080 - размер экрана
 isRemote=true - проверка запуска теста удаленно
-remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub - удаленный запуск тестов (url изменен в целях безопасности)
+remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub - адрес удаленного запуска тестов (url изменен в целях безопасности)
 ```
