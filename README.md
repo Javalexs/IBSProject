@@ -58,7 +58,7 @@ gradle clean test -Denv=local
 
 ### Удаленный запуск тестов производится через программу [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
 #### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
-####и далее подтверить нажав на кнопку "Собрать"
+#### и далее подтвердить нажав на кнопку "Собрать"
 <p align="center">
   <img src="images/screen/Jenkins1.jpg" alt="Jenkins1" width="1000">
 </p>
@@ -84,5 +84,15 @@ gradle clean test -Denv=local
 
  <code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного сервера (url изменен в целях безопасности)
 
+Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_ui/33/allure/)
+Нажав на значки Allure Reзort и Allure TessOps можно посмотреть подробный отчет по тестам.
 
+На данной странице все тесты прошли успешно, что показывает зеленая круговая диаграмма "STATUS"
+<p align="center">
+  <img src="images/screen/allure new1.jpg" alt="allure new1" width="1000">
+</p>
 
+Тут два теста упали, а один тест был приостановлен 
+<p align="center">
+  <img src="images/screen/Allure report 3.jpg" alt="Allure report 3" width="1000">
+</p>
