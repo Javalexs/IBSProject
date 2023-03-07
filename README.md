@@ -123,7 +123,7 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и подтве�
 
 ## Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/20096)<img width="4%" title="Allure TestOPS" src="images/icons/Allure_TO.svg">
 <p align="center">
-  <img src="images/screen/AllureTestOps.jpg" alt="AllureErr" width="900">
+  <img src="images/screen/AllureTestOps.jpg" alt="AllureTestOps" width="900">
 </p>
 
 
