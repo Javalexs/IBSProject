@@ -84,7 +84,8 @@ gradle clean test -Denv=local
 
  <code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного сервера (url изменен в целях безопасности)
 
-Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_ui/33/allure/)
+## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_ui/33/allure/)
+
 Нажав на значки Allure Reзort и Allure TessOps можно посмотреть подробный отчет по тестам.
 
 На данной странице все тесты прошли успешно, что показывает зеленая круговая диаграмма "STATUS"
