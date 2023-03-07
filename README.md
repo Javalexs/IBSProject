@@ -57,15 +57,17 @@ gradle clean test -Denv=local
 
 
 ### Удаленный запуск тестов производится через программу [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
-### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
-и далее подтверить нажав на кнопку "Собрать"
+#### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
+####и далее подтверить нажав на кнопку "Собрать"
 <p align="center">
-  <img src="images/screen/jenkins1.jpg" alt="Jenkins" width="10000">
+  <img src="images/screen/jenkins1.jpg" alt="Jenkins" width="1000">
 </p>
-далее в нижнем левом углу сборка начнет собираться. После окончания сборки появится значок AllureTestOps и Allure Report. 
-Если сборка успешная до будет подветчиваться зеленым цветом 
+В нижнем левом углу сборка начнет собираться. После окончания появится значок AllureTestOps и Allure Report.
+Если сборка успешная до будет подветчиваться зеленым цветом. Также, в правом углу будет показан графический тренд изменения состояния
+тестов от количества сборок.
+
 <p align="center">
-  <img src="images/screen/jenkins2.jpg" alt="Jenkins" width="10000">
+  <img src="images/screen/jenkins2.jpg" alt="Jenkins" width="1000">
 </p>
 
 #### Параметры сборки по умолчанию:
