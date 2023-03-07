@@ -19,14 +19,14 @@
 
 <code><img width="5%" title="IntelliJ IDEA" src="images/icons/Idea.svg"></code>
 <code><img width="5%" title="Java" src="images/icons/Java.svg"></code>
-<code><img width="5%" title="Selenoid" src="images/icons/Selenoid.svg"></code>
+<code><img src="images/icons/Selenoid.svg" title="Selenoid" width="5%"/></code>
 <code><img width="5%" title="Selenide" src="images/icons/Selenide.svg"></code>
 <code><img width="5%" title="Gradle" src="images/icons/Gradle.svg"></code>
 <code><img width="5%" title="Junit5" src="images/icons/Junit5.svg"></code>
 <code><img width="5%" title="GitHub" src="images/icons/GitHub.svg"></code>
 <code><img width="5%" title="Allure Report" src="images/icons/Allure.svg"></code>
 <code><img width="5%" title="Allure TestOps" src="images/icons/Allure_TO.svg"></code>
-<code><img width="5%" title="Jenkins" src="images/icons/Jenkins_logo.svg"></code>
+<code><img width="5%" title="Jenkins" src="images/icons/Jenkins.svg"/></code>
 <code><img width="5%" title="Jira" src="images/icons/Jira.svg"></code>
 
 ## :bookmark_tabs: Реализованные проверки:
@@ -47,6 +47,7 @@
 gradle clean test -Denv=local
 ```
  со следующими параметрами сборки по умолчанию:
+
  <code>baseUrl</code> =https://ibs.ru - адрес сайта на котором запускаются тесты
 
  <code>browserName=chrome</code> - имя браузера
@@ -58,7 +59,7 @@ gradle clean test -Denv=local
  <code>isRemote=false</code> - проверка запуска теста локально
 
 
-### Удаленный запуск тестов производится через программу Jenkins 
+### Удаленный запуск тестов производится через программу Jenkins через удаленный сервер 
 
  Параметры сборки по умолчанию:
  <code>baseUrl=https://ibs.ru</code> - адрес сайта на котором запускаются тесты
@@ -66,4 +67,4 @@ gradle clean test -Denv=local
  <code>browserVersion=100</code> - версия браузера
  <code>browserSize=1920x1080</code> - размер экрана
  <code>isRemote=true</code> - проверка запуска теста удаленно
- <code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного запуска тестов (url изменен в целях безопасности)
+ <code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного сервера (url изменен в целях безопасности)
