@@ -47,11 +47,11 @@
 gradle clean test -Denv=local
 
 со следующими параметрами сборки, которые хранятся в проекте в директории: resources/local.properties:
-baseUrl=https://ibs.ru - адрес сайта на котором запускаются тесты
-browserName=chrome - имя браузера
-browserVersion=100 - версия браузера
-browserSize=1920x1080 - размер экрана
-isRemote=false - проверка запуска теста локально
+<code>baseUrl=https://ibs.ru</code> - адрес сайта на котором запускаются тесты
+<code>browserName=chrome</code> - имя браузера
+<code>browserVersion=100</code> - версия браузера
+<code>browserSize=1920x1080</code> - размер экрана
+<code>isRemote=false</code> - проверка запуска теста локально
 ```
 
 ### Удаленный запуск тестов производится через программу Jenkins командой:
@@ -59,10 +59,10 @@ isRemote=false - проверка запуска теста локально
 gradle clean test -Denv=remote
 
 со следующими параметрами сборки, которые хранятся в проекте в директории: resources/remote.properties:
-baseUrl=https://ibs.ru - адрес сайта на котором запускаются тесты
-browserName=chrome - имя браузера
-browserVersion=100 - версия браузера
-browserSize=1920x1080 - размер экрана
-isRemote=true - проверка запуска теста удаленно
-remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub - адрес удаленного запуска тестов (url изменен в целях безопасности)
+<code>baseUrl=https://ibs.ru</code> - адрес сайта на котором запускаются тесты
+<code>browserName=chrome</code> - имя браузера
+<code>browserVersion=100</code> - версия браузера
+<code>browserSize=1920x1080</code> - размер экрана
+<code>isRemote=true</code> - проверка запуска теста удаленно
+<code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного запуска тестов (url изменен в целях безопасности)
 ```
