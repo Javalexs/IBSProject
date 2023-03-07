@@ -89,10 +89,15 @@ gradle clean test -Denv=local
 
 На данной странице все тесты прошли успешно, что показывает зеленая круговая диаграмма "STATUS"
 <p align="center">
-  <img src="images/screen/allure new1.jpg" alt="allure new1" width="1000">
+  <img src="images/screen/allure1.jpg" alt="allure1" width="900">
 </p>
 
 Тут два теста упали, а один тест был приостановлен 
 <p align="center">
-  <img src="images/screen/Allure report 3.jpg" alt="Allure report 3" width="1000">
+  <img src="images/screen/allure2.jpg" alt="allure2" width="900">
+</p>
+
+Если кликнуть
+<p align="center">
+  <img src="images/screen/AllureErr.jpg" alt="AllureErr" width="900">
 </p>
