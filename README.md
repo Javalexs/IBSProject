@@ -95,7 +95,11 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
 
 ## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/QA-Project_UI/3/allure)
 
-Нажав на значки Allure Report и Allure TessOps можно посмотреть подробный отчет по тестам.
+Нажав на значок Allure Report или Allure TessOps можно посмотреть подробный отчет по тестам.
+
+<p align="center">
+  <img src="images/screen/goto.jpg" alt="AllureErr" width="900">
+</p>
 
 На данной странице все тесты прошли успешно, что показывает зеленая круговая диаграмма "STATUS"
 
@@ -109,11 +113,6 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
   <img src="images/screen/allure2.jpg" alt="allure2" width="900">
 </p>
 
-Если кликнуть
-
-<p align="center">
-  <img src="images/screen/AllureErr.jpg" alt="AllureErr" width="900">
-</p>
 
 ## Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/20096)<img width="4%" title="Allure TestOPS" src="images/icons/Allure_TO.svg">
 <p align="center">
@@ -122,20 +121,18 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
 
 
 ## Уведомления в Telegram с использованием бота
-После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
+После завершения сборки бот, созданный в <code>Telegram</code>, обрабатывает и отправляет сообщение с отчетом о прохождении тестов.
+На левой картинке количество тестов меньше на один в результате устранения багов в одном из тестов
 
 <p align="center">
 <img title="Telegram Notifications" src="images/screen/telegram.jpg">
 </p>
 
 
-## Пример запуска теста в Selenoid
+## Пример запуска тестов в Selenoid
 
-К каждому тесту в отчете прилагается видео.
+На данном видео выполняется весь процесс тестирования страницы сайта
 
-На данном видео выполняется:
-
-- Проверка сообщения об ошибке при авторизации c невалидными данными
 <p align="center">
   <img title="Selenoid Video" src="images/screen/gifkatest.gif">
 </p>
