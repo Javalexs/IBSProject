@@ -46,7 +46,7 @@
 ```bash
 gradle clean test -Denv=local
 
-со следующими параметрами сборки, которые хранятся в проекте в директории: resources/local.properties:
+со следующими параметрами сборки по умолчанию:
 <code>baseUrl=https://ibs.ru</code> - адрес сайта на котором запускаются тесты
 <code>browserName=chrome</code> - имя браузера
 <code>browserVersion=100</code> - версия браузера
@@ -54,11 +54,9 @@ gradle clean test -Denv=local
 <code>isRemote=false</code> - проверка запуска теста локально
 ```
 
-### Удаленный запуск тестов производится через программу Jenkins командой:
+### Удаленный запуск тестов производится через программу Jenkins 
 ```bash
-gradle clean test -Denv=remote
-
-со следующими параметрами сборки, которые хранятся в проекте в директории: resources/remote.properties:
+Параметры сборки по умолчанию:
 <code>baseUrl=https://ibs.ru</code> - адрес сайта на котором запускаются тесты
 <code>browserName=chrome</code> - имя браузера
 <code>browserVersion=100</code> - версия браузера
