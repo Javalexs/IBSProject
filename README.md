@@ -56,7 +56,7 @@ gradle clean test -Denv=local
  <code>isRemote=false</code> - проверка запуска теста локально
 
 
-### Удаленный запуск тестов производится через программу [Jenkins] (https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
+### Удаленный запуск тестов производится через программу [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
 ### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
 и далее подтверить нажав на кнопку "Собрать"
 
