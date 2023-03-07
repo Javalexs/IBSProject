@@ -102,3 +102,25 @@ gradle clean test -Denv=local
 <p align="center">
   <img src="images/screen/AllureErr.jpg" alt="AllureErr" width="900">
 </p>
+
+
+<p align="center">
+  <img src="images/screen/AllureTestOps.jpg" alt="AllureErr" width="900">
+</p>
+## Уведомления в Telegram с использованием бота
+После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
+
+<p align="center">
+<img title="Telegram Notifications" src="images/screen/telegram.jpg">
+</p>
+
+## Пример запуска теста в Selenoid
+
+К каждому тесту в отчете прилагается видео.
+
+На данном видео выполняется:
+
+- Проверка сообщения об ошибке при авторизации c невалидными данными
+<p align="center">
+  <img title="Selenoid Video" src="images/screen/gifkatest.gif">
+</p>
