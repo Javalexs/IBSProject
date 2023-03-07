@@ -1,7 +1,7 @@
 package config;
 import org.aeonbits.owner.Config;
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:remote.properties"
 })
 
 public interface ProjectConfig extends Config {

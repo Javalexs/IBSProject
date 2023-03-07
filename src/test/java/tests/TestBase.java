@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.ProjectConfig;
+import config.WebDriverConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -23,7 +24,7 @@ public class TestBase {
     public FailPage failPage = new FailPage();
     @BeforeAll
     static void addSite(){
-        ProjectConfig.setUp();
+        WebDriverConfig.setUp();
     }
     @BeforeEach
     void openUrl(){
