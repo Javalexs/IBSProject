@@ -48,9 +48,13 @@ gradle clean test -Denv=local
 ```
  со следующими параметрами сборки по умолчанию:
  <code>baseUrl</code> =https://ibs.ru - адрес сайта на котором запускаются тесты
+
  <code>browserName=chrome</code> - имя браузера
+
  <code>browserVersion=100</code> - версия браузера
+
  <code>browserSize=1920x1080</code> - размер экрана
+
  <code>isRemote=false</code> - проверка запуска теста локально
 
 
