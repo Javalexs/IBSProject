@@ -60,12 +60,12 @@ gradle clean test -Denv=local
 ### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
 и далее подтверить нажав на кнопку "Собрать"
 <p align="center">
-  <img src="images/screen/jenkins1.jpg" alt="Jenkins" width="800">
+  <img src="images/screen/jenkins1.jpg" alt="Jenkins" width="10000">
 </p>
 далее в нижнем левом углу сборка начнет собираться. После окончания сборки появится значок AllureTestOps и Allure Report. 
 Если сборка успешная до будет подветчиваться зеленым цветом 
 <p align="center">
-  <img src="images/screen/jenkins2.jpg" alt="Jenkins" width="800">
+  <img src="images/screen/jenkins2.jpg" alt="Jenkins" width="10000">
 </p>
 
 #### Параметры сборки по умолчанию:
