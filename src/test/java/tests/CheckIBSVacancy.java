@@ -15,27 +15,25 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("start")
 public class CheckIBSVacancy extends TestBase {
-    @BeforeEach
-    void openUrl(){
-        open("/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/");
-    }
+
     @Test
     @Disabled
-    @DisplayName("Проверка наличия заголовка вакансии")
+    @DisplayName("Проверка на наличие заголовка вакансии")
     void checkBannerTest(){
         generalPage.bannerTest();
     }
+
     @Test
     @DisplayName("Проверка содержания заголовка вакансии")
     void checkHeadingTest(){
         String expectedTitle = "Инженер по автоматизации тестирования Java";
         generalPage.headingTest(expectedTitle);
-
     }
+
     @Test
-    @DisplayName("Проверка  вакансии на странице")
+    @DisplayName("Проверка названия вакансии на странице")
     void checkSearchVacancyTest(){
-        String value = "Аналитик СЭД";
+        String value = "Администратор проектов";
         generalPage.searchVacancyTest(value);
     }
 
@@ -54,12 +52,11 @@ public class CheckIBSVacancy extends TestBase {
             "Направления, IBS и МЭСИ заключили соглашение о стратегическом партнерстве",
             "Проекты, Управление проектами – для специалистов заказчика"
     })
-    @ParameterizedTest(name = "Проверка названия статьи \"{1}\"" + ", в результате ввода запроса в поиск \"{0}\"")
+    @ParameterizedTest(name = "Проверка присутствия названия статьи \"{1}\"" + ", в результате ввода запроса в поиск \"{0}\"")
     void checkSearchTest(String searchWord, String categoryWord) {
-        step("Присутствие заголовка статьи в результате ввода запроса", () ->{
-            locatorPage.searchTest(searchWord, categoryWord);
-        });
+                    locatorPage.searchTest(searchWord, categoryWord);
     }
+
     static Stream<Arguments> searchCategoryTest() {
         List <String> company = List.of("О компании", "Менеджмент",
                 "История IBS", "Признание", "Партнёры", "Раскрытие информации", "Контакты");

@@ -15,7 +15,7 @@
 
 ## :technologist: Технологии и инструменты
 
-<p  align="center">
+
 
 <code><img width="5%" title="IntelliJ IDEA" src="images/icons/Idea.svg"></code>
 <code><img width="5%" title="Java" src="images/icons/Java.svg"></code>
@@ -29,4 +29,26 @@
 <code><img width="5%" title="Jenkins" src="images/icons/Jenkins_logo.svg"></code>
 <code><img width="5%" title="Jira" src="images/icons/Jira.svg"></code>
 
-</p>
+## :bookmark_tabs: Реализованные проверки:
+
+- Проверка на наличие заголовка вакансии
+- Проверка содержания заголовка вакансии
+- Проверка названия вакансии на странице
+- Поиск подзаголовка в тексте вакансии
+- Проверка присутствия названия статьи, в результате ввода запроса в поиск
+- Проверка отображения списка подкатегорий в выбранной категории 
+- Поиск элемента в навигации страницы
+- Проверка отсутсвия фавикона
+
+## :computer: Запуск тестов из терминала
+
+### Локальный запуск тестов
+
+```bash
+gradle clean test -D///todo
+```
+
+### Удаленный запуск тестов
+
+```bash
+gradle clean test -D/////todo

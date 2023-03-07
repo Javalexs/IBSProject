@@ -57,15 +57,17 @@ tasks.withType(Test) {
         }
     }
 }
-
-task start_tests (type: Test) {
-    useJUnitPlatform{
-        includeTags("start")
-
-    }
+test {
+    useJUnitPlatform()
 }
-task stop_tests (type: Test) {
-    useJUnitPlatform {
-        includeTags("stop")
-    }
-}
+//task start_tests (type: Test) {
+//    useJUnitPlatform{
+//        includeTags("start")
+//
+//    }
+//}
+//task stop_tests (type: Test) {
+//    useJUnitPlatform {
+//        includeTags("stop")
+//    }
+//}
