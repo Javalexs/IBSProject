@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
 
 public interface ProjectConfig extends Config {
     @Key("baseUrl")
-    @DefaultValue("https://IBS.ru")
+    @DefaultValue("https://ibs.ru")
     String getBaseUrl();
 
     @Key("browserName")
