@@ -61,8 +61,9 @@ gradle clean test -Denv=local
 
 
 ### Удаленный запуск тестов производится через программу [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
-#### для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе LAUNCH_PARAMETR стоит параметр <code>remote</code>
-#### и далее подтвердить нажав на кнопку "Собрать"
+     для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе 
+LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее подтвердить нажав на кнопку "Собрать"
+
 <p align="center">
   <img src="images/screen/Jenkins1.jpg" alt="Jenkins1" width="1000">
 </p>
@@ -88,6 +89,7 @@ gradle clean test -Denv=local
 
  <code>remoteUrl=https://user:@selenoid.autotests.cloud/wd/hub</code> - адрес удаленного сервера (url изменен в целях безопасности)
 
+
 ## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/QA-Project_UI/3/allure)
 
 Нажав на значки Allure Report и Allure TessOps можно посмотреть подробный отчет по тестам.
@@ -105,11 +107,12 @@ gradle clean test -Denv=local
 </p>
 
 Если кликнуть
+
 <p align="center">
   <img src="images/screen/AllureErr.jpg" alt="AllureErr" width="900">
 </p>
 
-##  Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/20096)<img width="4%" title="Allure TestOPS" src="images/icons/Allure_TO.svg">
+## Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/20096)<img width="4%" title="Allure TestOPS" src="images/icons/Allure_TO.svg">
 <p align="center">
   <img src="images/screen/AllureTestOps.jpg" alt="AllureErr" width="900">
 </p>

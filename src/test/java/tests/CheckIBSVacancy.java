@@ -105,6 +105,7 @@ public class CheckIBSVacancy extends TestBase {
     void checkPathFailTest(String str) {
         failPage.pathFailTest(str);
     }//для того чтобы тест упал ввести слово "Тестирование"
+
     @Test
     @DisplayName("Проверка отсутствия фавикона")
     void checkFaviconFailTest(){
