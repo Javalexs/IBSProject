@@ -17,7 +17,6 @@ import static io.qameta.allure.Allure.step;
 public class CheckIBSVacancy extends TestBase {
 
     @Test
-    @Disabled
     @DisplayName("Проверка на наличие заголовка вакансии")
     void checkBannerTest(){
         generalPage.bannerTest();
