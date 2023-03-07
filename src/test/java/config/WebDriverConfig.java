@@ -1,30 +1,24 @@
 package config;
-import org.aeonbits.owner.Config;
-@Config.Sources({
-        "classpath:${env}.properties"
-})
 
-public interface WebDriverConfig extends Config {
-    @Key("baseUrl")
-    @DefaultValue("https://IBS.ru")
-    String getBaseUrl();
+import com.codeborne.selenide.Configuration;
+import org.aeonbits.owner.ConfigFactory;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
-    @Key("browserName")
-    @DefaultValue("chrome")
-    String getBrowserName();
+public class WebDriverConfig {
+    static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
-    @Key("browserVersion")
-    @DefaultValue("100.0")
-    String getBrowserVersion();
+    public static void setUp() {
+        Configuration.baseUrl = config.getBaseUrl();
+        Configuration.browserSize = config.getBrowserSize();
+        Configuration.browser = config.getBrowserName();
+        Configuration.browserVersion = config.getBrowserVersion();
+        if (config.isRemote()) {
+            Configuration.remote = config.getRemoteUrl();
+        }
 
-    @Key("browserSize")
-    @DefaultValue("1920x1080")
-    String getBrowserSize();
-
-    @Key("isRemote")
-    @DefaultValue("false")
-    Boolean isRemote();
-
-    @Key("remoteUrl")
-    String getRemoteUrl();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
+    }
 }
