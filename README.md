@@ -1,4 +1,8 @@
-# <img width="4%" title="Allure TestOPS" src="images/logo/hh_logo.svg"> Проект по автоматизации тестирования сайта hh.ru
+<p align="center">
+  <img src="images/screen/social.jpg" alt="social" width="900">
+</p> 
+
+# Проект по автоматизации тестирования страницы сайта ibs.ru
 
 ##	Содержание
 
