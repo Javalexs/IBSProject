@@ -65,7 +65,7 @@ gradle clean test -Denv=local
 
 ### Удаленный запуск тестов производится при помощи программы [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
 
-    Для запуска тестов в программе нужно нажать <code>Собрать с параметрами</code> убедиться, что в графе
+Для запуска тестов в программе нужно нажать <code>Собрать с параметрами</code> убедиться, что в графе
 LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее подтвердить нажав на кнопку <code>Собрать</code>
 
 <p align="center">
@@ -122,6 +122,7 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
 
 
 ## Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/20096)<img width="4%" title="Allure TestOPS" src="images/icons/Allure_TO.svg">
+
 <p align="center">
   <img src="images/screen/AllureTestOps.jpg" alt="AllureErr" width="900">
 </p>
