@@ -5,7 +5,6 @@ import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
 public class RegPage {
-    private static final String url = "/career/jobs/inzhener-po-avtomatizatsii-testirovaniya-java-lyuboy-region-rf-udalennaya-rabota/";
     public RegPage firstAct(){
         step("Жмем кнопку \"Принять условия\"", () -> {
             $(linkText("Принять условия")).click();
