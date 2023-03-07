@@ -4,6 +4,7 @@
 
 # Проект по автоматизации тестирования страницы сайта ibs.ru
 
+
 ##	Содержание
 
 - [Технологии и инструменты](#technologist-технологии-и-инструменты)
@@ -30,6 +31,7 @@
 <code><img width="5%" title="Jenkins" src="images/icons/Jenkins.svg"/></code>
 <code><img width="5%" title="Jira" src="images/icons/Jira.svg"></code>
 
+
 ## :bookmark_tabs: Реализованные проверки:
 
 - Проверка на наличие заголовка вакансии
@@ -40,6 +42,7 @@
 - Проверка отображения списка подкатегорий в выбранной категории 
 - Поиск элемента в навигации страницы
 - Проверка отсутсвия фавикона
+
 
 ## :computer: Запуск тестов
 
@@ -67,9 +70,9 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
 <p align="center">
   <img src="images/screen/Jenkins1.jpg" alt="Jenkins1" width="1000">
 </p>
-В нижнем левом углу сборка начнет собираться. После окончания появится значок AllureTestOps и Allure Report.
-Если сборка успешная до будет подветчиваться зеленым цветом. Также, в правом углу будет показан графический тренд изменения состояния
-тестов от количества сборок.
+В левом нижнем углу сборка начнет собираться. После окончания появится значок AllureTestOps и Allure Report.
+Если сборка успешная до будет подветчиваться зеленым цветом. Также, в правом углу будет показан графический 
+тренд изменения состояния тестов от количества сборок.
 
 <p align="center">
   <img src="images/screen/Jenkins2.jpg" alt="Jenkins2" width="1000">
@@ -117,12 +120,14 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
   <img src="images/screen/AllureTestOps.jpg" alt="AllureErr" width="900">
 </p>
 
+
 ## Уведомления в Telegram с использованием бота
 После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
 <img title="Telegram Notifications" src="images/screen/telegram.jpg">
 </p>
+
 
 ## Пример запуска теста в Selenoid
 
