@@ -14,7 +14,7 @@
 - [Интеграция с Allure TestOps](#интеграция-с-allure-testops)
 - [Интеграция с Jira](#-интеграция-с-jira)
 - [Уведомления в Telegram с использованием бота](#уведомления-в-telegram-с-использованием-бота)
-- [Пример запуска теста в Selenoid](#пример-запуска-теста-в-selenoid)
+- [Пример запуска теста в Selenoid](#пример-запуска-тестов-в-selenoid)
 
 
 ## :technologist: Технологии и инструменты
@@ -63,16 +63,19 @@ gradle clean test -Denv=local
  <code>isRemote=false</code> - проверка запуска теста локально
 
 
-### Удаленный запуск тестов производится через программу [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
-     для запуска тестов в программе нужно нажать "Собрать с параметрами" убедиться, что в графе 
-LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее подтвердить нажав на кнопку "Собрать"
+### Удаленный запуск тестов производится при помощи программы [Jenkins](https://jenkins.autotests.cloud/job/QA-Project_UI/) через удаленный сервер 
+
+    Для запуска тестов в программе нужно нажать <code>Собрать с параметрами</code> убедиться, что в графе
+LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее подтвердить нажав на кнопку <code>Собрать</code>
 
 <p align="center">
   <img src="images/screen/Jenkins1.jpg" alt="Jenkins1" width="1000">
 </p>
+
 В левом нижнем углу сборка начнет собираться. После окончания появится значок AllureTestOps и Allure Report.
 Если сборка успешная до будет подветчиваться зеленым цветом. Также, в правом углу будет показан графический 
 тренд изменения состояния тестов от количества сборок.
+
 
 <p align="center">
   <img src="images/screen/Jenkins2.jpg" alt="Jenkins2" width="1000">
@@ -95,19 +98,23 @@ LAUNCH_PARAMETR стоит параметр <code>remote</code> и далее п
 
 ## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/QA-Project_UI/3/allure)
 
-Нажав на значок Allure Report или Allure TessOps можно посмотреть подробный отчет по тестам.
+Кликнув на значок Allure Report или Allure TessOps можно посмотреть подробный отчет по тестам.
 
 <p align="center">
   <img src="images/screen/goto.jpg" alt="AllureErr" width="900">
 </p>
 
+
 На данной странице все тесты прошли успешно, что показывает зеленая круговая диаграмма "STATUS"
+
 
 <p align="center">
   <img src="images/screen/allure1.jpg" alt="allure1" width="900">
 </p>
 
+
 Тут два теста упали, а один тест был приостановлен 
+
 
 <p align="center">
   <img src="images/screen/allure2.jpg" alt="allure2" width="900">
