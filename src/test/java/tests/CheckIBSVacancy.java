@@ -32,7 +32,7 @@ public class CheckIBSVacancy extends TestBase {
     @Test
     @DisplayName("Проверка названия вакансии на странице")
     void checkSearchVacancyTest(){
-        String value = "Администратор проектов";
+        String value = "Архитектор информационных систем";
         generalPage.searchVacancyTest(value);
     }
 
