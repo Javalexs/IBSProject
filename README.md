@@ -57,7 +57,7 @@ gradle clean test -Denv=local
 gradle clean test -Denv=remote
 ```
 
-### <code><img width="3%" title="Jenkins" src="images/icons/Jenkins.svg"/></code> в фреймворке [Jenkins](https://jenkins.autotests.cloud/job/QA_Project_Mobile/)
+### <img width="3%" title="Jenkins" src="images/icons/Jenkins.svg"/> в фреймворке [Jenkins](https://jenkins.autotests.cloud/job/QA_Project_Mobile/)
 
 Для запуска тестов в программе нужно нажать <code>Собрать с параметрами</code>. В графе
 BROWSER выбрать браузер для запуска и подтвердить кликнув на кнопку <code>Собрать</code>
