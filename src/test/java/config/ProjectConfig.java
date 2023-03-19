@@ -1,7 +1,8 @@
 package config;
 import org.aeonbits.owner.Config;
 @Config.Sources({
-        "classpath:remote.properties"
+        "classpath:${env}.properties",
+        "classpath:local.properties"
 })
 
 public interface ProjectConfig extends Config {
@@ -27,4 +28,22 @@ public interface ProjectConfig extends Config {
 
     @Key("remoteUrl")
     String getRemoteUrl();
+
+    @Key("name")
+    String getName();
+
+    @Key("lastName")
+    String getLastName();
+    @Key("link")
+    String getLink();
+
+    @Key("email")
+    String getEmail();
+
+    @Key("phone")
+    String getPhone();
+
+    @Key("phrase")
+    String getPhrase();
+
 }

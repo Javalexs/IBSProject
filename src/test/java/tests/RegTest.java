@@ -1,5 +1,7 @@
 package tests;
 
+import config.ProjectConfig;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,21 +9,21 @@ public class RegTest extends TestBase {
     @Test
     @DisplayName("Проверка страницы отклика на вакансию")
     void checkRegistrationPageTest() {
-        String link = "https://hh.ru/resume/bedbb11cff092cc6850039ed1f6e5067464672";
-        String name = "Alexey";
-        String last_name = "Fadeev";
-        String email = "fadeevae87@gmail.com";
-        String phone = "+79260123456";
-        String str = "Доброго времени суток. Направляю вам свое резюме...";
+        ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
+        String name = config.getName();
+        String lastName = config.getLastName();
+        String link = config.getLink();
+        String email = config.getEmail();
+        String phone = config.getPhone();
+        String phrase = config.getPhrase();
 
         regPage.firstAct()
                 .setLinkCv(link)
                 .setFirstName(name)
-                .setLastName(last_name)
+                .setLastName(lastName)
                 .setEmail(email)
                 .setPhone(phone)
-                .setMessage(str)
+                .setMessage(phrase)
                 .checkBox();
-
     }
 }
