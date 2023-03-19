@@ -1,6 +1,6 @@
 package tests;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -10,32 +10,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
-
 @Tag("start")
-public class CheckIBSVacancy extends TestBase {
-
-    @Test
-    @DisplayName("Проверка на наличие заголовка вакансии")
-    void checkBannerTest(){
-        generalPage.bannerTest();
-    }
-
-    @Test
-    @DisplayName("Проверка содержания заголовка вакансии")
-    void checkHeadingTest(){
-        String expectedTitle = "Инженер по автоматизации тестирования Java";
-        generalPage.headingTest(expectedTitle);
-    }
-
-    @Test
-    @DisplayName("Проверка названия вакансии на странице")
-    void checkSearchVacancyTest(){
-        String value = "Архитектор информационных систем";
-        generalPage.searchVacancyTest(value);
-    }
-
+public class SubtitleTest extends TestBase {
     @ValueSource(strings = {
             "Ваши задачи",
             "Наши ожидания",
@@ -74,43 +50,10 @@ public class CheckIBSVacancy extends TestBase {
     @MethodSource
     @ParameterizedTest(name = "Проверка отображения списка подкатегорий \"{1}\"" + ", в категории \"{0}\"")
     void searchCategoryTest(String category, List<String> filter){
-            locatorPage.categoryTest(category, filter);
+        locatorPage.categoryTest(category, filter);
     }
-    @Test
-    @DisplayName("Проверка страницы отклика на вакансию")
-    void checkRegistrationPageTest() {
-        String link = "https://hh.ru/resume/bedbb11cff092cc6850039ed1f6e5067464672";
-        String name = "Alexey";
-        String last_name = "Fadeev";
-        String email = "fadeevae87@gmail.com";
-        String phone = "+79260123456";
-        String str = "Доброго времени суток. Направляю вам свое резюме...";
 
-        regPage.firstAct()
-               .setLinkCv(link)
-               .setFirstName(name)
-               .setLastName(last_name)
-               .setEmail(email)
-               .setPhone(phone)
-               .setMessage(str)
-               .checkBox();
 
-    }
-    @ValueSource(strings = {
-        "Главная",
-        "Карьера",
-        "Вакансии"
-    })
-    @ParameterizedTest(name = "Поиск элемента \"{0}\" в навигации страницы")
-    void checkPathFailTest(String str) {
-        failPage.pathFailTest(str);
-    }//для того чтобы тест упал ввести слово "Тестирование"
-
-    @Test
-    @DisplayName("Проверка отсутствия фавикона")
-    void checkFaviconFailTest(){
-        failPage.faviconFailTest();
-    }
 }
 
 

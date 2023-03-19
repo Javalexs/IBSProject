@@ -16,6 +16,7 @@ public class WebDriverConfig {
             Configuration.remote = config.getRemoteUrl();
         }
 
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
