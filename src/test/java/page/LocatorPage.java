@@ -39,7 +39,7 @@ public class LocatorPage {
 
     public LocatorPage subTitleTest(String value){
         step("Поиск подзаголовков в тексте вакансии", () -> {
-            $$(".col-9 col-t-12").find(text(value));
+            $$(".wrap").find(text(value));
         });
         return this;
     }
