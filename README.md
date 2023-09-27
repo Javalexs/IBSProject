@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="images/screen/social.jpg" alt="social" width="900">
-</p> 
-
 # Проект по автоматизации тестирования страницы сайта ibs.ru
 
 
